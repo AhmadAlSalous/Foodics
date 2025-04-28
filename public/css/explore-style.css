@@ -1,0 +1,173 @@
+body {
+    font-family: Arial, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D1B6FF;
+    color: #000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+/* Search bar styles */
+#search-bar {
+    margin: 0 auto 20px; /* Center the search bar horizontally */
+    text-align: center; /* Center the contents of the search bar */
+}
+
+#search-input {
+    padding: 10px;
+    width: 70%;
+    height: 25px;
+    border-radius: 5px 0 0 5px;
+    border: 2px solid #000;
+}
+
+#search-input:focus {
+    outline: none;  
+}
+
+#search-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#search-btn:hover {
+    background-color: #555;
+    border: 1px solid #555;
+}
+
+/* Recipe grid styles */
+.recipe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.recipe-card {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    width: 45%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    border: 2px solid #000;
+}
+
+.recipe-card:hover {
+    transform: scale(1.05);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #000;
+}
+
+
+.recipe-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.recipe-card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+.recipe-image {
+    position: relative; /* Ensure the overlay is positioned relative to the recipe image */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d5a2e5; /* Solid color background */
+    color: black;
+    font-size: 1.2rem;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    overflow-y: auto; /* Add scroll if content exceeds height */
+    z-index: 2; /* Bring the overlay above the recipe image */
+
+}
+
+.recipe-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h4 {
+    margin-bottom: 10px;
+    color: #fff; /* Text color for headings */
+}
+
+.overlay ul,
+.overlay ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    list-style-type: disc; /* Use bullets for unordered lists */
+}
+
+.overlay ol {
+    list-style-type: decimal; /* Use numbers for ordered lists */
+}
+
+.overlay li {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #FFEB3B;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #000;
+}
